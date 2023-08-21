@@ -2,6 +2,7 @@ from dash import Dash, dcc, html, Input, Output, callback
 import pandas as pd
 
 app = Dash(__name__)
+server = app.server
 app.layout = html.Div([
     html.Button("Download Excel", id="btn_xlsx"),
     dcc.Download(id="download-dataframe-xlsx"),
